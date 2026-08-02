@@ -1,0 +1,865 @@
+/* ==UserStyle==
+@name           Čebelca.biz - Dark Mode
+@namespace      github.com/openstyles/stylus
+@version        1.8.1
+@description    Dark mode theme for Čebelca.biz (including Login page & MooAccess dialogs)
+@author         X
+@license        MIT
+==/UserStyle== */
+
+@-moz-document domain("cebelca.biz") {
+
+  /* ==========================================================================
+     1. GLOBAL RESET & BASE LAYOUT
+     ========================================================================== */
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #444654 !important;
+  }
+
+  html, body, #main-area, #main-body, #controls {
+    background-color: #222328 !important;
+    background-image: none !important;
+    color: #f4f4f5 !important;
+  }
+
+  p, div, td, th, li, label, em, b, strong, small {
+    color: #f4f4f5 !important;
+  }
+
+  /* ==========================================================================
+     2. TYPOGRAPHY & LINKS
+     ========================================================================== */
+  a {
+    color: #60a5fa !important;
+
+    &:hover {
+      color: #93c5fd !important;
+    }
+  }
+
+  /* ==========================================================================
+     3. HEADER & MAIN NAVIGATION
+     ========================================================================== */
+  #main-header {
+    background-color: #2a2b32 !important;
+    border-bottom-color: #444654 !important;
+  }
+
+  #title {
+    color: #ffffff !important;
+
+    .comp-name {
+      color: #a1a1aa !important;
+    }
+  }
+
+  #account-bar {
+    color: #a1a1aa !important;
+
+    a.tab1 {
+      color: #ffffff !important;
+    }
+    a.tab2 {
+      color: #a1a1aa !important;
+    }
+  }
+
+  #tabnav li {
+    &.tab1 a {
+      background-color: #2563eb !important;
+      color: #ffffff !important;
+      border-color: #2563eb !important;
+    }
+
+    &.tab2 a {
+      background-color: #2a2b32 !important;
+      color: #a1a1aa !important;
+      border-color: #444654 !important;
+
+      &:hover {
+        background-color: #363842 !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  /* ==========================================================================
+     4. SUB-BAR & SEARCH FILTERS
+     ========================================================================== */
+  #sub-bar {
+    background-color: #2a2b32 !important;
+    border-color: #444654 !important;
+  }
+
+  #filters {
+    color: #a1a1aa !important;
+
+    img {
+      filter: brightness(0) invert(1) !important;
+    }
+
+    a {
+      color: #60a5fa !important;
+
+      &.act {
+        color: #ffffff !important;
+        background-color: #2563eb !important;
+        border-color: #3b82f6 !important;
+      }
+    }
+  }
+
+  /* ==========================================================================
+     5. DATE & TIME PICKER ICONS
+     ========================================================================== */
+  img[id^="datetoggler_"],
+  img[src*="calendar.png"],
+  img[src*="clock.png"] {
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+  }
+
+  /* ==========================================================================
+     6. DATEPICKER POPUP DIALOG
+     ========================================================================== */
+  .datepicker {
+    background: #2a2b32 !important;
+    background-color: #2a2b32 !important;
+    border: 1px solid #444654 !important;
+    color: #f4f4f5 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+
+    .header {
+      background: #363842 !important;
+      background-color: #363842 !important;
+      border-bottom: 1px solid #444654 !important;
+
+      .title, .titleText, .column {
+        color: #ffffff !important;
+        font-weight: bold !important;
+      }
+
+      .previous, .next, .closeButton {
+        background: #25262c !important;
+        background-color: #25262c !important;
+        color: #60a5fa !important;
+        border: 1px solid #444654 !important;
+        border-radius: 3px !important;
+        font-weight: bold !important;
+        line-height: 14px !important;
+
+        &:hover {
+          background: #2563eb !important;
+          background-color: #2563eb !important;
+          color: #ffffff !important;
+          border-color: #3b82f6 !important;
+        }
+      }
+    }
+
+    .body {
+      background-color: #2a2b32 !important;
+    }
+
+    table.days {
+      background-color: #2a2b32 !important;
+
+      th.day {
+        background-color: #25262c !important;
+        color: #a1a1aa !important;
+      }
+
+      td.day {
+        background-color: #2a2b32 !important;
+        color: #f4f4f5 !important;
+
+        &:hover {
+          background-color: #363842 !important;
+          color: #ffffff !important;
+        }
+
+        &.otherMonth {
+          color: #71717a !important;
+          opacity: 0.5 !important;
+        }
+
+        &.selected {
+          background: #2563eb !important;
+          background-color: #2563eb !important;
+          color: #ffffff !important;
+          font-weight: bold !important;
+        }
+
+        &.today {
+          border: 1px solid #60a5fa !important;
+          color: #60a5fa !important;
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
+
+  /* ==========================================================================
+     7. USRJOY SUPPORT WIDGET
+     ========================================================================== */
+  body div#_usrjoy_button div#usrjoy-btn-br a,
+  #usrjoy_button,
+  a#usrjoy_button {
+    background: #2563eb !important;
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border: 1px solid #3b82f6 !important;
+    text-shadow: none !important;
+    border-radius: 4px 4px 0 0 !important;
+
+    &:hover {
+      background: #1d4ed8 !important;
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+    }
+  }
+
+  #usrjoy {
+    background: #2a2b32 !important;
+    background-color: #2a2b32 !important;
+    color: #ffffff !important;
+    border: 1px solid #444654 !important;
+  }
+
+  /* ==========================================================================
+     8. STATUS ALERTS & HIGH-CONTRAST NOTIFICATIONS
+     ========================================================================== */
+  .alert, 
+  span.alert, 
+  table.data-table tr td span.alert,
+  *[style*="color:red"], 
+  *[style*="color: red"] {
+    color: #ff3b30 !important;
+    font-weight: bold !important;
+  }
+
+  .good, 
+  span.good, 
+  *[style*="color:green"], 
+  *[style*="color: green"] {
+    color: #4ade80 !important;
+  }
+
+  /* ==========================================================================
+     9. STATISTICS & SVG CHARTS
+     ========================================================================== */
+  svg, 
+  div.horiz-bar svg, 
+  div.multiline-graph svg {
+    background: #25262c !important;
+    background-color: #25262c !important;
+
+    rect.section {
+      fill: #2a2b32 !important;
+      stroke: #444654 !important;
+    }
+
+    text {
+      fill: #f4f4f5 !important;
+
+      &.month {
+        fill: #cbd5e1 !important;
+      }
+
+      &.sold {
+        fill: #ff3b30 !important;
+      }
+
+      &.payed {
+        fill: #4ade80 !important;
+      }
+    }
+  }
+
+  .message-ok {
+    background: #1e3a8a !important;
+    background-color: #1e3a8a !important;
+    color: #bae6fd !important;
+    border: 1px solid #2563eb !important;
+    border-radius: 6px !important;
+    padding: 10px 14px !important;
+  }
+
+  h2.yearlinks, h3.yearlinks {
+    color: #cbd5e1 !important;
+
+    a {
+      color: #60a5fa !important;
+
+      &.act {
+        color: #ffffff !important;
+        background-color: #2563eb !important;
+        border-radius: 4px !important;
+      }
+    }
+  }
+
+  div.stats-cmds {
+    background: #2a2b32 !important;
+    background-color: #2a2b32 !important;
+    border: 1px solid #444654 !important;
+    border-radius: 6px !important;
+
+    div a, 
+    div a.left, 
+    div a.middle, 
+    div a.right {
+      background: #363842 !important;
+      background-color: #363842 !important;
+      color: #60a5fa !important;
+      border: 1px solid #4d505e !important;
+
+      &:hover {
+        background: #444754 !important;
+        background-color: #444754 !important;
+        color: #93c5fd !important;
+      }
+
+      &.act {
+        background: #2563eb !important;
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        border-color: #3b82f6 !important;
+      }
+    }
+
+    div.filter {
+      background-color: #25262c !important;
+      border: 1px solid #444654 !important;
+      color: #f4f4f5 !important;
+
+      &.dirty {
+        background-color: #451a03 !important;
+        border-color: #b45309 !important;
+      }
+    }
+  }
+
+  div.horiz-bar {
+    color: #f4f4f5 !important;
+
+    span {
+      color: #f4f4f5 !important;
+
+      img {
+        filter: brightness(0) invert(1) !important;
+      }
+    }
+
+    small {
+      color: #cbd5e1 !important;
+    }
+  }
+
+  span.sold, table.stats td.sold, table.stats th.sold {
+    color: #ff3b30 !important;
+  }
+
+  span.payed, table.stats td.payed, table.stats th.payed {
+    color: #4ade80 !important;
+  }
+
+  span.unpaid_bd, table.stats td.unpaid_bd, table.stats th.unpaid_bd {
+    color: #60a5fa !important;
+  }
+
+  span.unpaid_pd, table.stats td.unpaid_pd, table.stats th.unpaid_pd {
+    color: #ff3b30 !important;
+  }
+
+  table.stats {
+    background-color: #2a2b32 !important;
+    border-color: #444654 !important;
+
+    th {
+      background-color: #363842 !important;
+      color: #ffffff !important;
+      border-color: #444654 !important;
+
+      &.month {
+        color: #cbd5e1 !important;
+      }
+    }
+
+    td {
+      background-color: #2a2b32 !important;
+      color: #f4f4f5 !important;
+      border-color: #363842 !important;
+    }
+  }
+
+  a.print-cmd {
+    color: #60a5fa !important;
+    font-weight: bold !important;
+  }
+
+  /* ==========================================================================
+     10. FORMS, FIELDSETS & FISCAL SETUP PANELS
+     ========================================================================== */
+  form, 
+  div.form, 
+  #form, 
+  #form-area, 
+  #main-content form,
+  body form.plans, 
+  form.plans,
+  fieldset, 
+  form fieldset, 
+  div.form fieldset, 
+  .right fieldset, 
+  #settings-tabs fieldset {
+    background: #2a2b32 !important;
+    background-color: #2a2b32 !important;
+    color: #f4f4f5 !important;
+    border-color: #444654 !important;
+
+    h2, h3, h4, legend {
+      color: #ffffff !important;
+      border-bottom-color: #444654 !important;
+    }
+  }
+
+  form .instructions {
+    background: #25262c !important;
+    background-color: #25262c !important;
+    border: 1px solid #444654 !important;
+    color: #f4f4f5 !important;
+  }
+
+  .todo-msgs {
+    background: #451a03 !important;
+    background-color: #451a03 !important;
+    border: 1px solid #b45309 !important;
+    color: #fde68a !important;
+
+    p, li, b, strong {
+      color: #fde68a !important;
+    }
+  }
+
+  .todo-msgs-2 {
+    background: #25262c !important;
+    background-color: #25262c !important;
+    border: 1px solid #444654 !important;
+    color: #f4f4f5 !important;
+  }
+
+  /* ==========================================================================
+     11. SETTINGS NAVIGATION & SUB-TABS
+     ========================================================================== */
+  .section-menu {
+    background-color: #2a2b32 !important;
+    border-bottom-color: #444654 !important;
+
+    a {
+      background: #363842 !important;
+      background-color: #363842 !important;
+      border: 1px solid #444654 !important;
+      color: #a1a1aa !important;
+
+      &:hover {
+        color: #ffffff !important;
+        background: #444754 !important;
+        background-color: #444754 !important;
+      }
+
+      &.act {
+        color: #ffffff !important;
+        background: #2563eb !important;
+        background-color: #2563eb !important;
+        border-color: #3b82f6 !important;
+      }
+    }
+  }
+
+  #subtabnav, ul#subtabnav {
+    background: #2a2b32 !important;
+    background-color: #2a2b32 !important;
+    border-bottom-color: #444654 !important;
+
+    li {
+      background-color: transparent !important;
+
+      a {
+        background-color: #2a2b32 !important;
+        color: #a1a1aa !important;
+        border: 1px solid #444654 !important;
+
+        &:hover {
+          background-color: #363842 !important;
+          color: #ffffff !important;
+        }
+      }
+
+      &.tab1 a, &.act a {
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        border-color: #3b82f6 !important;
+      }
+    }
+  }
+
+  .field em, div.field em, fieldset em {
+    color: #cbd5e1 !important;
+  }
+
+  span.inform-label {
+    background-color: #2a2b32 !important;
+    color: #f4f4f5 !important;
+    border: 1px solid #444654 !important;
+  }
+
+  #invoice_variant {
+    background-color: #1a1b1f !important;
+    color: #ffffff !important;
+    border-color: #444654 !important;
+  }
+
+  /* ==========================================================================
+     12. DATA TABLES & LISTS
+     ========================================================================== */
+  table.data-table, 
+  table.subdata-table, 
+  table.subdata-table2,
+  table.sums,
+  table#plansel, 
+  table.plansel, 
+  table.bills {
+    background-color: #2a2b32 !important;
+    border-color: #444654 !important;
+
+    th {
+      background-color: #363842 !important;
+      color: #ffffff !important;
+      border-color: #444654 !important;
+    }
+
+    td {
+      background-color: #2a2b32 !important;
+      color: #f4f4f5 !important;
+      border-color: #363842 !important;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #25262c !important;
+    }
+
+    tr:hover td {
+      background-color: #363842 !important;
+    }
+
+    tr.act td {
+      background-color: #363842 !important;
+      color: #ffffff !important;
+      border-left: 3px solid #60a5fa !important;
+    }
+
+    tr.toremove td {
+      background-color: #5c1d1d !important;
+      color: #fca5a5 !important;
+    }
+
+    tr.sum td, tr.disct td, tr.total td {
+      background-color: #25262c !important;
+      color: #ffffff !important;
+      font-weight: bold !important;
+    }
+
+    td.price {
+      color: #60a5fa !important;
+      font-weight: bold !important;
+    }
+  }
+
+  /* ==========================================================================
+     13. SUBSCRIPTION & BILLING PAGE
+     ========================================================================== */
+  div.happynote {
+    background: #14532d !important;
+    background-color: #14532d !important;
+    border: 1px solid #16a34a !important;
+
+    p, h3 {
+      color: #bbf7d0 !important;
+    }
+  }
+
+  div.current-bill-status {
+    background: #1e3a8a !important;
+    background-color: #1e3a8a !important;
+    border: 1px solid #2563eb !important;
+    color: #bae6fd !important;
+
+    .cbs-label {
+      color: #93c5fd !important;
+    }
+
+    .cbs-credit {
+      background-color: #451a03 !important;
+      border: 1px solid #b45309 !important;
+      color: #fde68a !important;
+    }
+  }
+
+  #proration-modal {
+    background: #2a2b32 !important;
+    background-color: #2a2b32 !important;
+    border: 1px solid #444654 !important;
+    color: #ffffff !important;
+
+    h3 {
+      color: #ffffff !important;
+    }
+
+    td {
+      color: #f4f4f5 !important;
+    }
+
+    .pm-btn-cancel {
+      background-color: #363842 !important;
+      color: #ffffff !important;
+      border: 1px solid #444654 !important;
+    }
+
+    .pm-btn-confirm {
+      background-color: #2563eb !important;
+      color: #ffffff !important;
+      border: 1px solid #3b82f6 !important;
+    }
+  }
+
+  /* ==========================================================================
+     14. ONBOARDING HELP CALLOUTS & DOCUMENT HEADERS
+     ========================================================================== */
+  .starthelp {
+    background: #25262c !important;
+    background-color: #25262c !important;
+    border: 1px solid #444654 !important;
+    color: #f4f4f5 !important;
+
+    p {
+      color: #f4f4f5 !important;
+    }
+
+    b, strong {
+      color: #60a5fa !important;
+    }
+
+    a {
+      color: #60a5fa !important;
+
+      &:hover {
+        color: #93c5fd !important;
+      }
+    }
+  }
+
+  .subdata-header,
+  .doc-send, 
+  .subarea {
+    background: #25262c !important;
+    background-color: #25262c !important;
+    border-color: #444654 !important;
+    color: #f4f4f5 !important;
+
+    td {
+      color: #f4f4f5 !important;
+
+      &.right {
+        color: #a1a1aa !important;
+      }
+    }
+
+    b {
+      color: #ffffff !important;
+    }
+  }
+
+  /* ==========================================================================
+     15. ACTION BUTTONS & INTERACTIVE COMMANDS
+     ========================================================================== */
+  table.data-table tr td.cmd a, 
+  #controls span#toolbar span#close-form-link a.cmd,
+  table.data-table td.cmd a,
+  td.cmd a,
+  .cmd a,
+  .pdf-opts a.download,
+  a.download,
+  .doc-send a.download,
+  a.litebtn,
+  .litebtn,
+  button, 
+  input[type="button"], 
+  input[type="submit"], 
+  input[type="reset"],
+  .submit, 
+  .lite, 
+  .mode-switch, 
+  #add-form-link, 
+  #add-form-link-1, 
+  #add-form-link-2, 
+  #add-form-link-3, 
+  a.lite, 
+  a.button, 
+  a.submit, 
+  [class*="btn"], 
+  [id*="-link"] {
+    background: #2563eb !important;
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+    text-shadow: none !important;
+
+    &:hover {
+      background: #1d4ed8 !important;
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+      border-color: #2563eb !important;
+    }
+
+    &[onclick*="remove"], &[onclick*="delete"] {
+      background: #dc2626 !important;
+      background-color: #dc2626 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+
+      &:hover {
+        background: #b91c1c !important;
+        background-color: #b91c1c !important;
+        color: #ffffff !important;
+        border-color: #dc2626 !important;
+      }
+    }
+  }
+
+  .red, button.red, #close-form-link.red, .submit-red {
+    background: #dc2626 !important;
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+    border-color: #ef4444 !important;
+
+    &:hover {
+      background: #b91c1c !important;
+      background-color: #b91c1c !important;
+      color: #ffffff !important;
+    }
+  }
+
+  .pdf-opts a:not(.download) {
+    color: #60a5fa !important;
+
+    &:hover {
+      color: #93c5fd !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  /* ==========================================================================
+     16. INPUT FIELDS & SELECT CONTROLS
+     ========================================================================== */
+  input[type="text"], 
+  input[type="number"], 
+  input[type="password"], 
+  textarea, 
+  select,
+  #search-input,
+  input.datep,
+  #doc-title-select {
+    background-color: #1a1b1f !important;
+    color: #ffffff !important;
+    border-color: #444654 !important;
+
+    &::placeholder {
+      color: #9496a8 !important;
+    }
+
+    &:focus {
+      border-color: #60a5fa !important;
+      outline: none !important;
+    }
+  }
+
+  option {
+    background-color: #2a2b32 !important;
+    color: #ffffff !important;
+  }
+
+  /* ==========================================================================
+     17. DIALOGS & MODAL POPUPS
+     ========================================================================== */
+  .dialogCME, .dialogNarrow, .dialogTiny, div.dialog, .dialogContent {
+    background-color: #2a2b32 !important;
+    color: #ffffff !important;
+    border-color: #444654 !important;
+
+    .dialogTitle, h2 {
+      background-color: #363842 !important;
+      color: #ffffff !important;
+      border-color: #444654 !important;
+    }
+  }
+
+  .problems {
+    background-color: #451a03 !important;
+    border: 1px solid #b45309 !important;
+    color: #fde68a !important;
+  }
+
+  .problems-lite {
+    background-color: #2a2b32 !important;
+    border: 1px solid #444654 !important;
+    color: #a1a1aa !important;
+  }
+
+  .badge, .badge-2 {
+    background-color: #363842 !important;
+    color: #e4e4e7 !important;
+    border: 1px solid #444654 !important;
+  }
+
+  /* ==========================================================================
+     18. LOGIN PAGE & ACCESS DIALOGS (.login-form, .MooAccessDialogHeader)
+     ========================================================================== */
+  div.login-form {
+    background: #2a2b32 !important;
+    background-color: #2a2b32 !important;
+    border: 1px solid #444654 !important;
+    color: #f4f4f5 !important;
+  }
+
+  div.MooAccessDialogHeader {
+    background: #363842 !important;
+    background-color: #363842 !important;
+    border-bottom: 1px solid #444654 !important;
+    padding: 10px 14px !important;
+  }
+
+  span.MooAccessDialogTitle {
+    color: #ffffff !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+  }
+
+  .news {
+    color: #f4f4f5 !important;
+
+    p, span {
+      color: #cbd5e1 !important;
+    }
+
+    a {
+      color: #60a5fa !important;
+
+      &:hover {
+        color: #93c5fd !important;
+      }
+    }
+  }
+}
