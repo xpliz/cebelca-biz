@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Čebelca.biz Themer
 @namespace      github.com/openstyles/stylus
-@version        2.2.3
+@version        2.2.4
 @description    Customizable dark mode theme for Čebelca.biz with color pickers and preset options
 @author         X
 @license        MIT
@@ -158,13 +158,40 @@
       --bg-main: #282a36 !important;
       --bg-card: #21222c !important;
       --bg-hover: #44475a !important;
-      --border-color: #44475a !important;
+      --border-color: #6272a4 !important;
       --accent: #bd93f9 !important;
       --accent-hover: #ff79c6 !important;
       --text-main: #f8f8f2 !important;
       --text-muted: #6272a4 !important;
       --link-color: #8be9fd !important;
       --input-bg: #191a21 !important;
+    }
+
+    .good,
+    span.good,
+    *[style*="color:green"],
+    *[style*="color: green"],
+    span.payed,
+    table.stats td.payed,
+    table.stats th.payed {
+      color: #50fa7b !important;
+    }
+
+    .alert,
+    span.alert,
+    *[style*="color:red"],
+    *[style*="color: red"],
+    span.sold,
+    table.stats td.sold,
+    table.stats th.sold {
+      color: #ff5555 !important;
+    }
+
+    a {
+      color: #8be9fd !important;
+    }
+    a:hover {
+      color: #ff79c6 !important;
     }
   }
 
@@ -908,6 +935,9 @@
      ========================================================================== */
   table.data-table tr td.cmd a,
   #controls span#toolbar span#close-form-link a.cmd,
+  #toolbar a,
+  #controls #toolbar a,
+  span#toolbar a,
   table.data-table td.cmd a,
   td.cmd a,
   .cmd a,
@@ -961,10 +991,49 @@
     }
   }
 
+  #toolbar a.white,
+  #controls #toolbar a.white,
+  a.white,
+  .white {
+    background: var(--bg-hover) !important;
+    background-color: var(--bg-hover) !important;
+    color: #ffffff !important;
+    border-color: var(--border-color) !important;
+
+    &:hover {
+      background: #444754 !important;
+      background-color: #444754 !important;
+      color: #ffffff !important;
+      border-color: var(--border-color) !important;
+    }
+  }
+
+  #toolbar a.green,
+  #controls #toolbar a.green,
+  a.green,
+  button.green,
+  .green,
+  .submit-green {
+    background: #16a34a !important;
+    background-color: #16a34a !important;
+    color: #ffffff !important;
+    border-color: #22c55e !important;
+
+    &:hover {
+      background: #15803d !important;
+      background-color: #15803d !important;
+      color: #ffffff !important;
+      border-color: #16a34a !important;
+    }
+  }
+
   .red,
   button.red,
   #close-form-link.red,
-  .submit-red {
+  .submit-red,
+  #toolbar a.red,
+  #controls #toolbar a.red,
+  a.red {
     background: #dc2626 !important;
     background-color: #dc2626 !important;
     color: #ffffff !important;
@@ -974,6 +1043,7 @@
       background: #b91c1c !important;
       background-color: #b91c1c !important;
       color: #ffffff !important;
+      border-color: #dc2626 !important;
     }
   }
 
