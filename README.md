@@ -2,7 +2,7 @@
 
 A modern, highly customizable dark mode theme & color customizer for **Čebelca.biz** (including login page, main app navigation, MooAccess popups, and financial data tables).
 
-![Version](https://img.shields.io/badge/version-2.2.4-blue.svg)
+![Version](https://img.shields.io/badge/version-v2.2.4-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/userstyle-Stylus-purple.svg)
 
