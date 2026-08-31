@@ -15,30 +15,36 @@ A modern, highly customizable dark mode theme & color customizer for **Čebelca.
 - ⚡ **Live Theme Switching**: Built with CSS Custom Properties and Stylus preprocessor for instant live updates without reloading pages.
 - 📱 **Complete UI Coverage**: Darkens main navigation tabs, date & time pickers, financial data tables, charts, forms, and dialog popups.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/eebe1e39-c377-4796-af29-fe2606239077" alt="Čebelca.biz Themer Preview" />
+</p>
+
 ---
 
 ## 🎨 Theme Presets
 
-| Preset Name | Base Background | Primary Accent | Vibe |
-| :--- | :--- | :--- | :--- |
-| **Default Dark (Slate)** | `#222328` | Blue (`#2563eb`) | Modern Slate Dark Mode |
-| **Dracula** | `#282a36` | Violet (`#bd93f9`) & Pink (`#ff79c6`) | High-contrast Vibrant Dark |
-| **Catppuccin (Mocha)** | `#1e1e2e` | Mauve (`#cba6f7`) | Soft Pastel Dark |
-| **Tokyo Night** | `#1a1b26` | Neon Blue (`#7aa2f7`) | Electric Neon City |
-| **Nord** | `#2e3440` | Frost Blue (`#88c0d0`) | Cool Arctic Slate |
-| **One Dark Pro** | `#282c34` | Atom Blue (`#61afef`) | Classic Code Editor |
-| **Gruvbox Dark** | `#282828` | Warm Orange (`#fe8019`) | Retro Warm Dark |
-| **Warm Dark (Espresso)**| `#1c1917` | Amber (`#ea580c`) | Coziness & Soft Contrast |
-| **Midnight Blue** | `#0b0f19` | Sky Blue (`#3b82f6`) | Deep Night Blue |
-| **OLED / Pitch Black** | `#000000` | Blue (`#2563eb`) | Maximum Battery Saver |
-| **Custom** | *User Defined* | *User Defined* | Custom Color Pickers |
+| Preset Name              | Base Background | Primary Accent                        | Vibe                       |
+| :----------------------- | :-------------- | :------------------------------------ | :------------------------- |
+| **Default Dark (Slate)** | `#222328`       | Blue (`#2563eb`)                      | Modern Slate Dark Mode     |
+| **Dracula**              | `#282a36`       | Violet (`#bd93f9`) & Pink (`#ff79c6`) | High-contrast Vibrant Dark |
+| **Catppuccin (Mocha)**   | `#1e1e2e`       | Mauve (`#cba6f7`)                     | Soft Pastel Dark           |
+| **Tokyo Night**          | `#1a1b26`       | Neon Blue (`#7aa2f7`)                 | Electric Neon City         |
+| **Nord**                 | `#2e3440`       | Frost Blue (`#88c0d0`)                | Cool Arctic Slate          |
+| **One Dark Pro**         | `#282c34`       | Atom Blue (`#61afef`)                 | Classic Code Editor        |
+| **Gruvbox Dark**         | `#282828`       | Warm Orange (`#fe8019`)               | Retro Warm Dark            |
+| **Warm Dark (Espresso)** | `#1c1917`       | Amber (`#ea580c`)                     | Coziness & Soft Contrast   |
+| **Midnight Blue**        | `#0b0f19`       | Sky Blue (`#3b82f6`)                  | Deep Night Blue            |
+| **OLED / Pitch Black**   | `#000000`       | Blue (`#2563eb`)                      | Maximum Battery Saver      |
+| **Custom**               | _User Defined_  | _User Defined_                        | Custom Color Pickers       |
 
 ---
 
 ## 🚀 Installation
 
 ### Prerequisites
+
 Install a UserCSS-compatible browser extension:
+
 - **[Stylus](https://github.com/openstyles/stylus)** (Recommended):
   - [Chrome Web Store](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
   - [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
